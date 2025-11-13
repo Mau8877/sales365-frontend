@@ -6,7 +6,7 @@
 # 2. Regla del Proxy (Para que funcione el Login y el Backend)
 [[redirects]]
   from = "/api/*"
-  to = "https://la-url-de-tu-backend-produccion.com/api/:splat" 
+  to = "https://sales365-backend.onrender.com" 
   status = 200
 
 # 3. Regla de SPA (Para que funcione F5 / Refresh)
