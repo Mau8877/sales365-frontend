@@ -59,7 +59,11 @@ import EditarVenta from "@/pages/Admin/GenerarNotaVenta/edit.jsx"
 import HistorialVentas from "@/pages/Admin/HistorialVentas/index.jsx"
 
 import GenerarReportesVoz from "@/pages/Admin/GenerarReportes/indexVoice.jsx"
-//import GenerarReportes from "@/pages/Admin/GenerarReportes/index.jsx"
+import GenerarReportesDinamicos from "@/pages/Admin/GenerarReportes/index.jsx"
+import ReporteBitacora from "@/pages/Admin/GenerarReportes/ReporteBitacora.jsx"
+import ReporteUsuarios from "@/pages/Admin/GenerarReportes/ReporteUsuarios.jsx"
+import ReporteVentas from "@/pages/Admin/GenerarReportes/ReporteVentas.jsx"
+import ReporteProductos from "@/pages/Admin/GenerarReportes/ReporteProductos.jsx"
 
 
 import GenerarPrediccion from "@/pages/Admin/GenerarPrediccion/index.jsx"
@@ -240,6 +244,31 @@ const router = createBrowserRouter([
       {
         path:"reporte/generar",
         element:<GenerarReportesVoz />
+      },
+      {
+        path:"reporte-dinamico/generar",
+        children: [
+          {
+            index: true,
+            element:<GenerarReportesDinamicos />
+          },
+          {
+            path: "bitacora",
+            element: <ReporteBitacora />,
+          },
+          {
+            path: "usuarios",
+            element: <ReporteUsuarios />,
+          },
+          {
+            path: "ventas",
+            element: <ReporteVentas />,
+          },
+          {
+            path: "productos",
+            element: <ReporteProductos />,
+          },
+        ]
       },
       {
         path:"prediccion/generar",

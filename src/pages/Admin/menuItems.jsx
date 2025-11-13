@@ -15,7 +15,8 @@ import {
   Briefcase,
   DollarSign,
   LayoutGrid,
-  Sparkles, 
+  Sparkles,
+  Mic,
 } from "lucide-react";
 
 const iconSize = 20;
@@ -120,8 +121,13 @@ export const generateMenuItems = (currentUser) => {
       icon: <BarChart size={iconSize} />,
       subItems: [
         {
-          label: "Generar Reporte",
+          label: "Generar Reporte Por Voz",
           path: "reporte/generar",
+          icon: <Mic size={iconSize} />,
+        },
+        {
+          label: "Generar Reporte Dinámico",
+          path: "reporte-dinamico/generar",
           icon: <BookCopy size={iconSize} />,
         },
       ],
@@ -206,7 +212,6 @@ export const generateMenuItems = (currentUser) => {
         comercialMenu,
         ventasAdminMenu,
         reportesMenu,
-        prediccionMenu,
       ];
 
     case "vendedor":

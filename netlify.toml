@@ -1,0 +1,16 @@
+# 1. Configuración de Build (Igual que en tu imagen)
+[build]
+  command = "npm run build"
+  publish = "dist"
+  
+# 2. Regla del Proxy (Para que funcione el Login y el Backend)
+[[redirects]]
+  from = "/api/*"
+  to = "https://la-url-de-tu-backend-produccion.com/api/:splat" 
+  status = 200
+
+# 3. Regla de SPA (Para que funcione F5 / Refresh)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
