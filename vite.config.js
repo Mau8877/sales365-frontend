@@ -15,7 +15,7 @@ export default defineConfig({
         short_name: 'SS365',
         description: 'El copiloto con IA para gestionar y hacer crecer tu negocio en Bolivia."',
         theme_color: '#3420e9ff',
-        start_url: '/',                
+        start_url: '/',              
         display: 'standalone',
         icons: [
           {
@@ -47,10 +47,7 @@ export default defineConfig({
             if (id.includes('xlsx')) {
               return 'vendor-xlsx';
             }
-            // Separa react y react-dom
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
+            
             return 'vendor';
           }
         }
