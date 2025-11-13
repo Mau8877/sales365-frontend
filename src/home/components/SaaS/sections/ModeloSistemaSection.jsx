@@ -1,0 +1,1 @@
+// luego añadir capturas del sistema y "venderlo en la home page"
